@@ -1,6 +1,13 @@
 #### Sistemas Interactivos 
 
 Instalaciones Interactivas en Museos - The Rain Room 
+
+Dispositivos de entrada: Sensores de movimiento, cámaras infrarrojas.
+
+Dispositivos de salida: Sistema de aspersores de agua controlados digitalmente, iluminación dinámica.
+
+Experiencia del usuario: Los visitantes caminan bajo una "lluvia" que parece evitar mojarlos, ya que los sensores detectan su presencia y detienen el agua en su trayectoria. La combinación de luz, sonido ambiental y la sensación de estar en una tormenta crea una experiencia única y artística.
+
 ![Esta es una imagen del museo] (https://h6a8m2f3.delivery.rocketcdn.me/wp-content/uploads/2021/05/20130510_RH-RR-MoMA-US_Stu_s-photos-18-1.webp)
 
 **Insertar imágenes**:
