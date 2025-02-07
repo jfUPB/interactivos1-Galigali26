@@ -5,7 +5,7 @@ Instalaciones Interactivas en Museos - The Rain Room
 
 **Insertar imágenes**:
 
-![Esta es una imagen bonita](../../../../assets/logoSC.webp)
+![Esta es una imagen bonita](../../../../assets/20130510_RH-RR-MoMA-US_Stu_s-photos-18-1.webp
 
 **Insertar hipervínculos**
 
