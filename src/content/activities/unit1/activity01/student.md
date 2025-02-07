@@ -1,7 +1,7 @@
-#### jshdakjshdjkas
+#### Sistemas Interactivos 
 
-asdkjhaskjdhaskjhdkjashdjkahsdkjas  
-sdjkhaskjdhaskjhdkajshdkjashdkjashdkjsah
+Instalaciones Interactivas en Museos - The Rain Room 
+![Esta es una imagen del museo] (https://h6a8m2f3.delivery.rocketcdn.me/wp-content/uploads/2021/05/20130510_RH-RR-MoMA-US_Stu_s-photos-18-1.webp)
 
 **Insertar imágenes**:
 
