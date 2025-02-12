@@ -19,3 +19,5 @@ Redondea los valores de brillo a enteros para evitar problemas de representació
 Se aumentó el factor de multiplicación en sin(x * 1.5) * cos(y * 1.5) para cambiar la figuras de las luces.
 Random(-0.5, 0.5) para hacer las formas diferentes.
 Se ajustó el rango de brillo en map() para evitar que los LEDs estén completamente apagados o demasiado brillantes.
+
+![Esta es una imagen bonita](../../../../assets/87A7DE7E-7DE4-41AA-AD25-CD6ED596459A.jpeg)
