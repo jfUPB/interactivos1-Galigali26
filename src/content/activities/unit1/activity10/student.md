@@ -1,3 +1,16 @@
+### Conexión y comunicación entre Micro:bit y p5.js
+Conexión: El navegador se conecta al Micro:bit a través de un puerto serial cuando el usuario presiona el botón "Connect to micro:bit".
+
+nvío de datos (Micro:bit → p5.js):
+
+Si presionas el botón A, el Micro:bit envía "A" y dice GALI en la pantalla.
+Si presionas el botón B, envía "B" y pone una cara feliz en la pantalla.
+Si lo sacudees, envía "C".
+p5.js recibe estos datos y cambia el color del cuadrado en la pantalla.
+envío de datos (p5.js → Micro:bit):
+
+Si se presiona el botón "Tristeza", p5.js envía "h" al Micro:bit y cuando lo recibe, el Micro:bit muestra una cara de desagrado en la pantalla.
+
 ### Código en p5.js
 ``` js
 let port;
