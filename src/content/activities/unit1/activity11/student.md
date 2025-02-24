@@ -75,4 +75,15 @@ function sendBtnClick() {
 }
 
 ```
+### Explicación:
+
+El código en p5.js conecta el Micro:bit y usa sus botones para mover un círculo en la pantalla:
+
+Inicializa la conexión serial y dibuja un círculo en el centro.
+Escucha datos del Micro:bit:
+Si recibe 'A', mueve el círculo a la izquierda.
+Si recibe 'B', lo mueve a la derecha.
+Constrain() para evitar que el círculo salga de la pantalla.
+Incluye botones para conectar/desconectar el Micro:bit y enviar datos.
+En resumen: El Micro:bit actúa como un control remoto para mover el círculo en p5.js.
 
