@@ -88,7 +88,6 @@ while True:
     if button_a.is_pressed():
             uart.write('A')
             display.scroll("GALI")
-            uart.write('A')
             sleep(500)
         
     if button_b.is_pressed():
