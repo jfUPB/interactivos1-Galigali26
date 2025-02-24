@@ -1,7 +1,6 @@
 ### Micro:bit 
 ``` js
 from microbit import *
-import music  # Importar el módulo de música
 
 uart.init(baudrate=115200)
 
