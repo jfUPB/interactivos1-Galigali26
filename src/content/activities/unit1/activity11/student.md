@@ -37,7 +37,7 @@ function setup() {
     connectBtn.position(80, 300);
     connectBtn.mousePressed(connectBtnClick);
 
-    circleX = width / 2; // Posición inicial del círculo
+    circleX = width / 2; 
 }
 
 function draw() {
@@ -48,11 +48,11 @@ function draw() {
     if (port.availableBytes() > 0) {
         let dataRx = port.read(1);
         if (dataRx == 'A') {
-            circleX -= 20; // Mover a la izquierda
+            circleX -= 20;
         } else if (dataRx == 'B') {
-            circleX += 20; // Mover a la derecha
+            circleX += 20; 
         }
-        circleX = constrain(circleX, 50, width - 50); // Evita que el círculo salga del lienzo
+        circleX = constrain(circleX, 50, width - 50);
     }
 
     if (!port.opened()) {
