@@ -33,7 +33,7 @@ function setup() {
     background(220);
     port = createSerial();
     
-    connectBtn = createButton('Connect to micro:bit');
+    connectBtn = createButton('conectar a micro:bit');
     connectBtn.position(80, 300);
     connectBtn.mousePressed(connectBtnClick);
 
@@ -48,17 +48,17 @@ function draw() {
     if (port.availableBytes() > 0) {
         let dataRx = port.read(1);
         if (dataRx == 'A') {
-            circleX -= 20;
+            circleX -= 20; 
         } else if (dataRx == 'B') {
             circleX += 20; 
         }
-        circleX = constrain(circleX, 50, width - 50);
+        circleX = constrain(circleX, 50, width - 50); 
     }
 
     if (!port.opened()) {
-        connectBtn.html('Connect to micro:bit');
+        connectBtn.html('conectar a micro:bit');
     } else {
-        connectBtn.html('Disconnect');
+        connectBtn.html('Desconectar');
     }
 }
 
@@ -73,5 +73,6 @@ function connectBtnClick() {
 function sendBtnClick() {
     port.write('h');
 }
+
 ```
 
