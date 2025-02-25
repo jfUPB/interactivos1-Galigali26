@@ -1,34 +1,99 @@
-### Diseño Generativo en Entretenimiento Digital
+### Micro:Bit
+```js
+from microbit import *
+import music
 
-El Diseño Generativo es una metodología que utiliza algoritmos y modelos computacionales para crear diseños, entornos y elementos de forma procedural, permitiendo una variedad infinita de resultados. En la industria del entretenimiento digital, esta técnica se ha convertido en una herramienta clave para la generación de contenido en videojuegos, experiencias interactivas y efectos visuales en películas y animaciones.
+uart.init(baudrate=115200)
+display.show(Image('00000:'
+                   '33333:'
+                   '55555:'
+                   '77777:'
+                   '99999'))
+    
+while True:
+    if button_a.is_pressed():
+        uart.write('A')
+        display.show(Image.MUSIC_QUAVER)
+        music.play(music.BA_DING)
+        sleep(500)
+    if button_b.is_pressed():
+        uart.write('B')
+        display.show(Image.MUSIC_QUAVERS) 
+        music.play(music.JUMP_UP)
+        sleep(500)
 
-Caso de Estudio: Diseño Generativo en Páginas Web de Entretenimiento Digital
+        if accelerometer.was_gesture('shake'):
+            uart.write('C') 
+        display.show(Image.SAD) 
+        music.play(music.WAWAWAWAA) 
+        sleep(500)
+```
 
-El Diseño Generativo ha revolucionado la forma en que se crean páginas web para el entretenimiento digital. Mediante el uso de inteligencia artificial y algoritmos generativos, las interfaces pueden adaptarse dinámicamente a las preferencias y necesidades de cada usuario, ofreciendo experiencias personalizadas y altamente visuales. Plataformas de streaming, sitios de videojuegos y páginas interactivas han implementado estas técnicas para mejorar la estética y funcionalidad de sus productos digitales.
+### Explicación del Código
+1. Importación de Librerías
 
-### Referente en Diseño Generativo: Joshua Davis
+Editar
+from microbit import *
+import music
+microbit: Permite el uso de los botones, la pantalla LED, el acelerómetro y la comunicación UART.
+music: Se utiliza para generar sonidos con el altavoz de la Micro:bit.
 
-Un referente clave en el mundo del Diseño Generativo es Joshua Davis, un diseñador y artista digital pionero en el uso de algoritmos para crear piezas visuales interactivas. Davis ha trabajado en la intersección entre el arte y la tecnología, utilizando programación para generar diseños únicos que responden a datos y a la interacción del usuario. Su enfoque ha influenciado la creación de interfaces web y experiencias digitales en la industria del entretenimiento.
+2. Inicialización de UART
 
-### Impacto de Joshua Davis en la Experiencia del Usuario
+uart.init(baudrate=115200)
+Configura la comunicación serial a 115200 baudios.
+Permite la transmisión de datos a un ordenador o a otro dispositivo.
 
-El trabajo de Davis ha transformado la manera en que los usuarios interactúan con interfaces visuales generativas. Sus proyectos han demostrado cómo el diseño generativo puede hacer que una página web no solo sea visualmente atractiva, sino también más inmersiva y receptiva a la interacción del usuario. Al integrar patrones algorítmicos y gráficos en tiempo real, Davis ha logrado interfaces que responden de manera intuitiva al comportamiento del usuario, aumentando el nivel de engagement y la sensación de personalización. Su trabajo ha sido utilizado en campañas de marcas globales y en proyectos de entretenimiento digital, donde la estética y la interacción dinámica juegan un papel fundamental.
+3. Mostrar una Imagen Inicial
+display.show(Image.HAPPY)
+Muestra una cara feliz en la pantalla LED cuando la Micro:bit se enciende.
 
-### Aplicación del Diseño Generativo en Web:
+5. Bucle Infinito (while True)
 
-Interfaces Adaptativas y Dinámicas: Los algoritmos generativos permiten diseñar interfaces que cambian en función del comportamiento del usuario, generando experiencias únicas e inmersivas.
+while True:
+Mantiene el código ejecutándose continuamente para detectar eventos.
 
-Generación de Elementos Visuales Personalizados: Se pueden crear gráficos, ilustraciones y animaciones que varían según las interacciones de los visitantes, haciendo que cada visita sea distinta.
+6. Reaccionar al Botón A
 
-Optimización Automática de la Experiencia del Usuario: El diseño generativo puede analizar patrones de uso y ajustar la estructura de la página en tiempo real para mejorar la navegabilidad y la usabilidad.
+if button_a.is_pressed():
+    uart.write('A')  # Envía 'A' por UART
+    display.show(Image.MUSIC_QUAVER)  # Muestra una nota musical
+    music.play(music.BA_DING)  # Reproduce un sonido corto
+    sleep(500)  # Espera para evitar repeticiones rápidas
+    
+Cuando se presiona el botón A:
+Se envía 'A' por UART.
+Se muestra una nota musical en la pantalla LED.
+Se reproduce el sonido BA_DING, un tono corto y agudo.
+Se usa sleep(500) para evitar múltiples activaciones rápidas.
 
-Creación Procedural de Contenidos: Desde banners interactivos hasta secciones generadas automáticamente con IA, las páginas pueden actualizarse de manera dinámica sin intervención manual.
+7. Reaccionar al Botón B
 
-### Impacto en la Experiencia del Usuario
+if button_b.is_pressed():
+    uart.write('B')  # Envía 'B' por UART
+    display.show(Image.MUSIC_QUAVERS)  # Muestra dos notas musicales
+    music.play(music.JUMP_UP)  # Reproduce un sonido de ascenso
+    sleep(500)  
+    
+Cuando se presiona el botón B:
+Se envía 'B' por UART.
+Se muestran dos notas musicales en la pantalla LED.
+Se reproduce el sonido JUMP_UP, un tono de ascenso.
+sleep(500) evita activaciones múltiples por mantener presionado el botón.
 
-El uso de Diseño Generativo en páginas web de entretenimiento digital permite a los usuarios disfrutar de experiencias más envolventes y personalizadas. La capacidad de adaptación en tiempo real hace que la navegación sea más intuitiva y atractiva, reduciendo la monotonía de interfaces estáticas. Además, la automatización en la generación de contenido mejora la eficiencia de los diseñadores, permitiéndoles centrarse en aspectos creativos sin preocuparse por tareas repetitivas.
+8. Reaccionar al Movimiento de Sacudida
+python
+Copiar
+Editar
+if accelerometer.was_gesture('shake'):
+    uart.write('C')  # Envía 'C' por UART
+    display.show(Image.SAD)  # Muestra una cara triste
+    music.play(music.WAWAWAWAA)  # Reproduce un sonido de error
+    sleep(500)  
+Cuando se sacude la Micro:bit:
+Se envía 'C' por UART.
+Se muestra una cara triste en la pantalla LED.
+Se reproduce el sonido WAWAWAWAA, que imita un sonido de fallo o tristeza.
+sleep(500) evita que pequeños movimientos activen la función repetidamente.
 
-### Conclusión
-
-El Diseño Generativo está redefiniendo la manera en que se diseñan páginas web en el ámbito del entretenimiento digital. La combinación de inteligencia artificial y algoritmos generativos abre nuevas posibilidades para la personalización y la interactividad, transformando la experiencia del usuario en algo más dinámico, atractivo y eficiente. Gracias a estas innovaciones, las plataformas digitales pueden ofrecer contenido visualmente impactante y altamente adaptable, asegurando que cada usuario tenga una experiencia única y memorable.
-
+    
