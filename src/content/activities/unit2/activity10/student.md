@@ -11,7 +11,7 @@ elif current_state == STATE_SMILE:
             display.show(Image.SAD)
             start_time = utime.ticks_ms()
             interval = SAD_INTERVAL
-        current_state = STATE_SAD <--acá
+        current_state = STATE_SAD //<--acá
 ```
 
 ### Vectores de prueba
