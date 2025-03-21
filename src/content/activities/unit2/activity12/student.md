@@ -1,3 +1,6 @@
+###El video
+https://we.tl/t-0jSerlD4ik
+
 ```js
 from microbit import *
 import utime
