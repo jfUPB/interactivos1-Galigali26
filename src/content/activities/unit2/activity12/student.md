@@ -3,20 +3,16 @@ from microbit import *
 import utime
 import music
 
-# Definir estados
 CONFIG = 0
 ARMED = 1
 EXPLODED = 2
 
-# Estado inicial
 estado = CONFIG
 
-# Tiempo inicial
-countdown_time = 20  # en segundos
+
+countdown_time = 20  
 
 
-
-# Variables de tiempo
 last_tick = utime.ticks_ms()
 
 def mostrar_tiempo(tiempo):
@@ -37,12 +33,11 @@ while True:
 
         if accelerometer.was_gesture("shake"):
             estado = ARMED
-            last_tick = utime.ticks_ms()  # Iniciar la cuenta regresiva
-
+            last_tick = utime.ticks_ms()  
     elif estado == ARMED:
         tiempo_actual = utime.ticks_ms()
         
-        if tiempo_actual - last_tick >= 1000:  # Cada segundo
+        if tiempo_actual - last_tick >= 1000: 
             countdown_time -= 1
             mostrar_tiempo(countdown_time)
             last_tick = tiempo_actual
@@ -57,6 +52,6 @@ while True:
         if pin_logo.is_touched():
             estado = CONFIG
             countdown_time = 20
-            display.clear()  # Limpiar pantalla antes de reiniciar
+            display.clear()  
 
 ```
