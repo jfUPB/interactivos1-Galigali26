@@ -1,3 +1,21 @@
+Implementé la funcionalidad solicitada separando claramente la detección de eventos (entrada desde sensores y puerto serial) del control de la bomba (la máquina de estados). Para esto:
+
+Variables de evento:
+Usé evento_ocurrido (booleano) para indicar si ocurrió un evento.
+
+(,el .Usé evento (string) para guardar cuál fue el evento: 'A', 'B', 'S' o 'T'.
+
+Función tareaEventos():
+Revisa si se presionó un botón, se agitó el micro:bit, se tocó el logo o llegó un dato por el serial.
+Si detecta un evento, actualiza evento y pone evento_ocurrido = True.
+Solo se procesa un evento por ciclo (para evitar conflictos).
+
+Función tareaBomba():
+Es la máquina de estados (CONFIGURACION, ARMADO, EXPLOSION).
+Solo actúa cuando evento_ocurrido es True, lee el evento, actúa según el estado, y luego consume el evento (poniendo evento_ocurrido = False).
+
+Así, la lógica de la bomba es independiente de la fuente del evento (sensor o serial).
+
 ```
 from microbit import *
 import utime
