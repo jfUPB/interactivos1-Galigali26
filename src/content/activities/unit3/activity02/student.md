@@ -1,3 +1,32 @@
+Definición de la secuencia correcta:
+Definí una lista llamada secuencia_correcta que contiene el orden exacto de las acciones necesarias para desactivar la bomba:
+
+
+secuencia_correcta = ['A', 'B', 'A', 'SHAKE']
+
+Captura de las acciones del usuario:
+Durante el estado ARMED, cada vez que el usuario presiona el botón A, el botón B, o agita el micro:bit, se registra el evento en una lista llamada secuencia_ingresada. Esto se hace con button_a.was_pressed(), button_b.was_pressed() y accelerometer.was_gesture("shake").
+
+Control del tamaño de la secuencia ingresada:
+Para que solo se guarden las últimas 4 acciones, se verifica que la lista no exceda el tamaño de la secuencia correcta. Si lo hace, se elimina el primer elemento:
+
+
+if len(secuencia_ingresada) > len(secuencia_correcta):
+    secuencia_ingresada.pop(0)
+    
+Verificación de coincidencia:
+Una vez que la lista secuencia_ingresada tiene 4 elementos, se compara con la secuencia correcta mediante la función verificar_secuencia(). Si coinciden:
+
+Se muestra una imagen de felicidad (Image.HAPPY)
+
+Se reproduce un sonido de éxito (music.POWER_UP)
+
+La bomba vuelve al estado de configuración (CONFIG)
+
+Se reinicia el tiempo de cuenta regresiva a 20 segundos
+
+Si la secuencia no es correcta, la bomba continúa su cuenta regresiva sin interrupción.
+
 ```
 from microbit import *
 import utime
