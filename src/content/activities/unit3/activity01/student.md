@@ -31,7 +31,7 @@ tiempos1 = {'rojo': 5, 'amarillo': 2, 'verde': 3}
 tiempos2 = {'rojo': 3, 'amarillo': 1, 'verde': 2}
 tiempos3 = {'rojo': 4, 'amarillo': 3, 'verde': 2}
 
-# Bucle principal: muestra los semáforos uno tras otro
+
 while True:
     mostrar_semaforo("S1", tiempos1, imagenes1)
     mostrar_semaforo("S2", tiempos2, imagenes2)
