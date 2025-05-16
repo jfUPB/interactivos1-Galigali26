@@ -1,5 +1,12 @@
-En esta manera de enviar los datos no se necesita enviar la informacion delimitada porque se envia en paquetes con los bytes justos, en los cambios con el codigo anterior esta enviando muchisimos datos en A y en Y pero deja fija esa posicionimage
+En el primer código, el micro:bit envía los datos como texto, separados por comas. Esta forma de estructurarlos es sencilla y clara, porque cada dato está segmentado y es fácil de leer desde el otro lado (por ejemplo, en una aplicación hecha con p5.js). Basta con dividir la cadena en cada coma para obtener los valores. Es una buena forma de empezar porque te permite ver exactamente qué estás enviando y recibirlo sin complicaciones. Eso sí, al usar texto (formato ASCII), puede resultar un poco más lento o pesado para enviar muchos datos de forma constante.
 
-![image](https://github.com/user-attachments/assets/b056a8bb-a337-4a73-bc5e-51b5dd31691a)
+En cambio, el segundo código da un paso adelante. Ya no manda texto, sino que define exactamente cuántos bytes se van a enviar (en este caso, 6), y los trata directamente como datos binarios. Esto hace que todo sea más eficiente y preciso: sabes exactamente cuánta información estás enviando y cómo está organizada. Además, reduce el margen de error, porque no necesitas interpretar cadenas de texto, solo leer bytes y entender qué significan.
 
-en la linea de print esta como si se estuviera enviando en ASCII, en las pruebas sigue enviando muchas veces el dato y comienza en generarlo en las coordenadas en las que comenzo
+Un detalle curioso es que, cuando se prueba ese segundo código, los datos parecen transmitirse todo el tiempo, incluso sin que el usuario haga nada. Esto puede pasar por dos razones: o el micro:bit está enviando datos constantemente en un bucle, sin esperar una acción específica, o el receptor no está interpretando correctamente los datos binarios, y termina leyendo cosas que no tienen sentido.
+
+Si comparamos esto con una versión más pulida del código —una que usa DataView para leer directamente esos bytes como números (ya sea enteros, flotantes, etc.)—, el cambio se nota bastante. Todo es más compacto, más estable y mucho más funcional. Con DataView, puedes tomar los bytes recibidos y convertirlos directamente en el tipo de dato que necesitas, sin pasos extra ni interpretaciones dudosas.
+
+Además, esta versión se asegura de que se hayan recibido todos los bytes necesarios antes de hacer algo con ellos. Eso evita errores por paquetes incompletos y hace que todo esté perfectamente sincronizado entre el micro:bit y la aplicación que recibe los datos.
+
+En resumen, pasar de enviar texto a enviar datos binarios bien estructurados es como pasar de una conversación informal a una comunicación clara, eficiente y profesional. Es una mejora importante, sobre todo si estás buscando que tu proyecto sea estable, rápido y listo para escalar.
+
