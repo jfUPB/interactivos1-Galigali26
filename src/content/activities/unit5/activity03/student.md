@@ -8,5 +8,3 @@ Si comparamos esto con una versión más pulida del código —una que usa DataV
 
 Además, esta versión se asegura de que se hayan recibido todos los bytes necesarios antes de hacer algo con ellos. Eso evita errores por paquetes incompletos y hace que todo esté perfectamente sincronizado entre el micro:bit y la aplicación que recibe los datos.
 
-En resumen, pasar de enviar texto a enviar datos binarios bien estructurados es como pasar de una conversación informal a una comunicación clara, eficiente y profesional. Es una mejora importante, sobre todo si estás buscando que tu proyecto sea estable, rápido y listo para escalar.
-
