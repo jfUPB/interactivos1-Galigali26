@@ -1,0 +1,7 @@
+Esta unidad fue una de las más visuales y creativas del curso, lo cual me permitió explorar el código desde una perspectiva más expresiva. Me gustó especialmente la posibilidad de personalizar el sketch a mi estilo, jugar con el color, el tamaño y los módulos SVG para lograr resultados únicos. Sentí que el aprendizaje fue activo: no se trató solo de seguir instrucciones, sino de experimentar, equivocarme y descubrir.
+
+Poder dibujar con elementos rotatorios que responden al mouse o al teclado me abrió los ojos a nuevas posibilidades dentro del diseño interactivo. Me recordó que el código también puede ser una herramienta artística, casi como un pincel, y eso me motivó bastante. Me resultó útil también revisar el código de otros compañeros para comparar enfoques, lo que enriqueció mi proceso.
+
+En cuanto a lo que se podría mejorar para los próximos semestres, creo que sería útil tener un par de ejemplos visuales más claros al inicio, especialmente para entender qué se espera lograr con cada parámetro. También ayudaría que se explicara un poco más sobre cómo funcionan las transformaciones (como translate() y rotate()), ya que al principio puede parecer confuso cómo afectan al dibujo. Otra sugerencia sería permitir un poco más de tiempo fuera del aula para experimentar y luego compartir en clase los resultados de forma más abierta, como una pequeña muestra.
+
+En resumen, fue una unidad muy estimulante que conecta lo técnico con lo creativo, y eso me parece esencial para una formación en diseño interactivo.

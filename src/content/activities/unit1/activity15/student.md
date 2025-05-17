@@ -1,0 +1,3 @@
+En este curso, he aprendido a replantear el uso de herramientas como ChatGPT, reconociendo que a veces pueden complicar la búsqueda de soluciones. Sin duda, debo fortalecer mis conocimientos en p5.js, aunque no sin frustración, siento que he logrado avances en este lenguaje, por ejemplo, comprendiendo mejor los bucles y las funciones.
+
+Por otro lado, trabajar con Micro:bit ha sido muy divertido. He podido desarrollar mis habilidades programando juegos sencillos con los LED y asignando acciones a los botones, lo que me ha permitido poner en práctica los conceptos aprendidos de manera creativa.
