@@ -1,5 +1,5 @@
 1. ¿Qué fue lo más difícil de esta unidad? ¿Por qué?
-Lo más difícil fue comprender y aplicar algunos conceptos teóricos. Además, la integración práctica de esos conceptos en proyectos reales demandó mucho análisis y tiempo para asegurar que funcionaran correctamente.
+Lo más difícil fue comprender y aplicar alguna sintaxis. Además, la integración práctica de esos conceptos en proyectos reales demandó mucho análisis y tiempo para asegurar que funcionaran correctamente.
 
 2. ¿Qué fue lo más fácil de esta unidad? ¿Por qué?
 Lo más fácil fue trabajar en los ejercicios prácticos una vez que comprendí la teoría, porque disfruto mucho la parte aplicada y la resolución de problemas con herramientas concretas.
